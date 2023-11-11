@@ -1,0 +1,2 @@
+-- AlterTable
+ALTER TABLE "Faq" ADD COLUMN     "likes" INTEGER NOT NULL DEFAULT 0;

@@ -1,0 +1,201 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id       String  @id @default(cuid())
+  fullName String
+  email    String  @unique
+  phone    String?
+  avatar   String?
+  country  String?
+  province String?
+  city     String?
+  balance  Float   @default(0)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  password      Password?
+  transactions  Transaction[]
+  cards         Card[]
+  pockets       Pocket[]
+  notifications Notification[]
+}
+
+model Password {
+  hash String
+
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  userId String @unique
+}
+
+model Accountant {
+  id                 String   @id @default(cuid())
+  name               String
+  logo               String
+  description        String
+  address            String
+  website            String
+  services           String[]
+  accountingSoftware String?
+  otherSoftware      String[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Company {
+  id       String  @id @default(cuid())
+  name     String
+  logo     String
+  industry String?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  transactions Transaction[]
+}
+
+enum TransactionStatus {
+  Pending
+  Success
+  Canceled
+}
+
+enum TransactionType {
+  // INCOME
+  // EXPENSE
+  Receive
+  Transfer
+  Subscribe
+}
+
+model Transaction {
+  id          String            @id @default(cuid())
+  number      String
+  description String?
+  amount      Float
+  status      TransactionStatus @default(Pending)
+  type        TransactionType
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  company   Company? @relation(fields: [companyId], references: [id])
+  companyId String?
+
+  contact   Contact? @relation(fields: [contactId], references: [id])
+  contactId String?
+
+  user   User   @relation(fields: [userId], references: [id])
+  userId String
+
+  notification Notification?
+}
+
+model Card {
+  id     String  @id @default(cuid())
+  name   String
+  number String
+  cvc    String
+  amount Float
+  expiry String
+  type   String?
+  email  String?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  user   User   @relation(fields: [userId], references: [id])
+  userId String
+}
+
+model Pocket {
+  id     String  @id @default(cuid())
+  name   String
+  amount Float
+  avatar String?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  user   User   @relation(fields: [userId], references: [id])
+  userId String
+}
+
+model Contact {
+  id       String  @id @default(cuid())
+  fullName String
+  username String  @unique
+  email    String  @unique
+  phone    String?
+  avatar   String?
+  country  String?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // user   User   @relation(fields: [userId], references: [id])
+  // userId String
+  transactions Transaction[]
+}
+
+model Country {
+  id      String @id @default(cuid())
+  name    String
+  code    String
+  emoji   String
+  unicode String
+  image   String
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Faq {
+  id       String   @id @default(cuid())
+  question String
+  answer   String
+  tags     String[]
+  likes    Int      @default(0)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model PartnerRequest {
+  id          String @id @default(cuid())
+  firstName   String
+  lastName    String
+  email       String
+  phone       String
+  companyName String
+  website     String
+  client      String
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Notification {
+  id          String  @id @default(cuid())
+  title       String
+  description String
+  type        String
+  read        Boolean @default(false)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  transaction   Transaction? @relation(fields: [transactionId], references: [id])
+  transactionId String?      @unique
+
+  user   User   @relation(fields: [userId], references: [id])
+  userId String
+}
