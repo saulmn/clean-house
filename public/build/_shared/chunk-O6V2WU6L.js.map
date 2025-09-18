@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../app/utils/getStatusColor.ts"],
-  "sourcesContent": ["export function getStatusColor(\n  status: \"Canceled\" | \"Success\" | \"Pending\" | string\n) {\n  const colorMap: { [key: string]: string } = {\n    Canceled: \"destructive\",\n    Success: \"default\",\n    Pending: \"warning\",\n  };\n\n  return colorMap[status] || \"secondary\";\n}\n"],
-  "mappings": ";AAAO,SAAS,eACd,QACA;AACA,QAAM,WAAsC;AAAA,IAC1C,UAAU;AAAA,IACV,SAAS;AAAA,IACT,SAAS;AAAA,EACX;AAEA,SAAO,SAAS,MAAM,KAAK;AAC7B;",
-  "names": []
-}

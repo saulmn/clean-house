@@ -1,7 +1,7 @@
 import { json } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
-import { ClientOnly } from "remix-utils";
-import type { LoaderArgs, V2_MetaFunction } from "@remix-run/node";
+import { ClientOnly } from "remix-utils/client-only";
+import type { LoaderFunctionArgs, MetaFunction } from "@remix-run/node";
 // components
 import { Breadcrumb, Container } from "~/components/ui";
 import { Currency, TotalBalance } from "~/components/admin";
@@ -16,11 +16,11 @@ import {
 import { requireUserId } from "~/session.server";
 import { prisma } from "~/db.server";
 
-export const meta: V2_MetaFunction = () => [
+export const meta: MetaFunction = () => [
   { title: "Wallets | Remix Template" },
 ];
 
-export async function loader({ request }: LoaderArgs) {
+export async function loader({ request }: LoaderFunctionArgs) {
   const userId = await requireUserId(request);
 
   const contacts = await getContacts();

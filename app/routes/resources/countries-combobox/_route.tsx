@@ -3,7 +3,7 @@ import { json } from "@remix-run/node";
 import invariant from "tiny-invariant";
 import { useFetcher } from "@remix-run/react";
 import { Check, ChevronsUpDown } from "lucide-react";
-import type { LoaderArgs } from "@remix-run/node";
+import type { LoaderFunctionArgs } from "@remix-run/node";
 // components
 import {
   Button,
@@ -22,7 +22,7 @@ import { cn } from "~/utils/cn";
 //
 import { prisma } from "~/db.server";
 
-export async function loader({ request }: LoaderArgs) {
+export async function loader({ request }: LoaderFunctionArgs) {
   let url = new URL(request.url);
   let query = url.searchParams.get("query");
   invariant(typeof query === "string", "query is required");

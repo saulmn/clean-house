@@ -1,4 +1,4 @@
-import { json, type LoaderArgs } from "@remix-run/node";
+import { json, type LoaderFunctionArgs } from "@remix-run/node";
 import bcrypt from "bcryptjs";
 // data
 import { ACCOUNTANTS } from "~/data/accountants";
@@ -10,7 +10,7 @@ import { FAQS } from "~/data/faqs";
 //
 import { prisma } from "~/db.server";
 
-export async function loader({ request }: LoaderArgs) {
+export async function loader({ request }: LoaderFunctionArgs) {
   const email = "demo@finlab.com";
   const fullName = "John Doe";
 

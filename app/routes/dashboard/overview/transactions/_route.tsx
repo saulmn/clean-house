@@ -1,5 +1,5 @@
 import { json } from "@remix-run/node";
-import type { ActionArgs, LoaderArgs, V2_MetaFunction } from "@remix-run/node";
+import type { ActionFunctionArgs, LoaderFunctionArgs, MetaFunction } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
 import invariant from "tiny-invariant";
 // components
@@ -16,11 +16,11 @@ import { getTransactionNumber } from "~/utils/getTransactionNumber";
 import { getUser, requireUserId } from "~/session.server";
 import { updateUserBalance } from "~/models/user.server";
 
-export const meta: V2_MetaFunction = () => [
+export const meta: MetaFunction = () => [
   { title: "Transactions | Remix Template" },
 ];
 
-export async function loader({ request }: LoaderArgs) {
+export async function loader({ request }: LoaderFunctionArgs) {
   const url = new URL(request.url);
   const type = url.searchParams.get("type");
   const industry = url.searchParams.get("industry");
@@ -77,7 +77,7 @@ export async function loader({ request }: LoaderArgs) {
   return json({ transactions: formatTransactions });
 }
 
-export async function action({ request }: ActionArgs) {
+export async function action({ request }: ActionFunctionArgs) {
   const userId = await requireUserId(request);
   const formData = await request.formData();
 

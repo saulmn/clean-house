@@ -1,7 +1,7 @@
-import type { V2_MetaFunction } from "@remix-run/node";
+import type { MetaFunction } from "@remix-run/node";
 import { json } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
-import { ClientOnly } from "remix-utils";
+import { ClientOnly } from "remix-utils/client-only";
 // components
 import {
   ExpenseAnalysis,
@@ -20,7 +20,7 @@ import {
 //
 import { prisma } from "~/db.server";
 
-export const meta: V2_MetaFunction = () => [
+export const meta: MetaFunction = () => [
   { title: "Statistics | Remix Template" },
 ];
 

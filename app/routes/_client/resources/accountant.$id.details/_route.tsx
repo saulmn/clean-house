@@ -1,5 +1,5 @@
 import { json } from "@remix-run/node";
-import type { V2_MetaFunction, LoaderArgs } from "@remix-run/node";
+import type { MetaFunction, LoaderFunctionArgs } from "@remix-run/node";
 import { Link, useLoaderData } from "@remix-run/react";
 import invariant from "tiny-invariant";
 // components
@@ -15,11 +15,11 @@ import { cn } from "~/utils/cn";
 //
 import { prisma } from "~/db.server";
 
-export const meta: V2_MetaFunction = () => [
+export const meta: MetaFunction = () => [
   { title: "Accountant details | Remix Template" },
 ];
 
-export async function loader({ params }: LoaderArgs) {
+export async function loader({ params }: LoaderFunctionArgs) {
   invariant(params.id, "Missing accountant id param");
 
   const accountant = await prisma.accountant.findUnique({

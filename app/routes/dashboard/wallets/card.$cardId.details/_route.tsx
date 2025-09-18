@@ -1,5 +1,9 @@
 import { json, redirect } from "@remix-run/node";
-import type { ActionArgs, LoaderArgs, V2_MetaFunction } from "@remix-run/node";
+import type {
+  ActionFunction,
+  LoaderFunction,
+  MetaFunction,
+} from "@remix-run/node";
 import invariant from "tiny-invariant";
 import { z } from "zod";
 import { parse } from "@conform-to/zod";
@@ -11,11 +15,13 @@ import { prisma } from "~/db.server";
 import { requireUserId } from "~/session.server";
 import { updateUserBalance } from "~/models/user.server";
 
-export const meta: V2_MetaFunction = () => [
-  { title: "Card details | Remix Template" },
-];
+export const meta: MetaFunction = () => {
+  return [
+    { title: "Card details | Remix Template" },
+  ];
+};
 
-export async function loader({ request, params }: LoaderArgs) {
+export const loader: LoaderFunction = async ({ request, params }) => {
   invariant(params.cardId, "Card id should be defined");
 
   const card = await prisma.card.findUnique({
@@ -25,7 +31,7 @@ export async function loader({ request, params }: LoaderArgs) {
   if (!card) throw new Response("Card not found", { status: 404 });
 
   return json({ cardInfo: card });
-}
+};
 
 export const editCardSchema = z.object({
   name: z.string({ required_error: "Card holder name is required" }),
@@ -35,7 +41,7 @@ export const editCardSchema = z.object({
   amount: z.number(),
 });
 
-export async function action({ request, params }: ActionArgs) {
+export const action: ActionFunction = async ({ request, params }) => {
   invariant(params.cardId, "Card id should be defined");
 
   const formData = await request.formData();

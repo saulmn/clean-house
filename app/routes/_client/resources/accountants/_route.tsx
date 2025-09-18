@@ -1,11 +1,11 @@
-import type { V2_MetaFunction } from "@remix-run/node";
+import type { MetaFunction } from "@remix-run/node";
 import { json } from "@remix-run/node";
 // components
 import { Hero, SearchAccountant } from "./components";
 
 import { prisma } from "~/db.server";
 
-export const meta: V2_MetaFunction = () => [
+export const meta: MetaFunction = () => [
   { title: "Accountants | Remix Template" },
 ];
 

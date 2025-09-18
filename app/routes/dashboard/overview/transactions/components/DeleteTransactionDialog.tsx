@@ -20,7 +20,7 @@ export default function DeleteTransactionDialog({
   transactionId: string;
 }) {
   const [open, setOpen] = useState(false);
-  const deleteTransactionFetcher = useFetcher();
+  const deleteTransactionFetcher = useFetcher<{ success?: boolean }>();
   const actionData = deleteTransactionFetcher.data;
   const isDeleting = deleteTransactionFetcher.state !== "idle";
 

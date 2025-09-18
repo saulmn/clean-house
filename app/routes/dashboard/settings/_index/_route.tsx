@@ -5,7 +5,7 @@ import { Link, useFetcher } from "@remix-run/react";
 import PhoneInputWithCountrySelect from "react-phone-number-input";
 import { Loader2 } from "lucide-react";
 import { json } from "@remix-run/node";
-import type { V2_MetaFunction, ActionArgs } from "@remix-run/node";
+import type { MetaFunction, ActionFunctionArgs } from "@remix-run/node";
 import { conform, useForm } from "@conform-to/react";
 // components
 import { InfoTooltip } from "~/components/admin";
@@ -29,7 +29,7 @@ import { cn } from "~/utils/cn";
 import { requireUserId } from "~/session.server";
 import { prisma } from "~/db.server";
 
-export const meta: V2_MetaFunction = () => [
+export const meta: MetaFunction = () => [
   { title: "Settings: Personal information | Remix Template" },
 ];
 
@@ -44,7 +44,7 @@ const schema = z.object({
   city: z.string().optional(),
 });
 
-export async function action({ request }: ActionArgs) {
+export async function action({ request }: ActionFunctionArgs) {
   const userId = await requireUserId(request);
   const formData = await request.formData();
   const submission = parse(formData, { schema });

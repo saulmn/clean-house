@@ -26,7 +26,7 @@ type SentMoneyDialogProps = {
 };
 
 export default function ReceiveMoneyDialog({ contacts }: SentMoneyDialogProps) {
-  const receiveMoneyFetcher = useFetcher();
+  const receiveMoneyFetcher = useFetcher<{ success?: boolean; error?: string | boolean }>();
   const carouselRef = useRef<Slider | null>(null);
   const [open, setOpen] = useState(false);
   const [selectContact, setSelectContact] = useState(0);
@@ -208,7 +208,7 @@ export default function ReceiveMoneyDialog({ contacts }: SentMoneyDialogProps) {
               label="Enter amount"
               placeholder="Amount"
               className="w-full pl-10"
-              error={actionData?.error}
+              error={actionData?.error ? String(actionData.error) : undefined}
             />
           </div>
 

@@ -27,7 +27,7 @@ type QuickTransferProps = {
 export default function QuickTransfer({ contacts }: QuickTransferProps) {
   const [selectContact, setSelectContact] = useState(0);
   const carouselRef = useRef<Slider | null>(null);
-  const quickTransferFetcher = useFetcher();
+  const quickTransferFetcher = useFetcher<{ error?: boolean }>();
 
   console.log(quickTransferFetcher.data);
 
@@ -180,7 +180,7 @@ export default function QuickTransfer({ contacts }: QuickTransferProps) {
                 placeholder="Amount"
                 className="w-full pl-10"
                 step="0.01"
-                error={quickTransferFetcher.data?.error}
+                error={quickTransferFetcher.data?.error ? "true" : undefined}
               />
             </div>
 

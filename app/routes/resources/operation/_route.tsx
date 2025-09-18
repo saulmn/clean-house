@@ -1,4 +1,4 @@
-import type { ActionArgs } from "@remix-run/node";
+import type { ActionFunctionArgs } from "@remix-run/node";
 import { json } from "@remix-run/node";
 // models
 import { updateUserBalance } from "~/models/user.server";
@@ -10,7 +10,7 @@ import { getTransactionNumber } from "~/utils/getTransactionNumber";
 //
 import { prisma } from "~/db.server";
 
-export async function action({ request }: ActionArgs) {
+export async function action({ request }: ActionFunctionArgs) {
   const userId = await requireUserId(request);
   const formData = await request.formData();
   const { contactId, amount, type } = Object.fromEntries(

@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../app/routes/_client/_layout.tsx"],
-  "sourcesContent": ["import { Outlet } from \"@remix-run/react\";\n\nimport { ClientLayout } from \"./components\";\n\nexport default function _layout() {\n  return (\n    <ClientLayout>\n      <Outlet />\n    </ClientLayout>\n  );\n}\n"],
-  "mappings": ";;;;;;;;;;;;;;;AAOM;AAHS,SAAR,UAA2B;AAChC,SACE,mDAAC,gBACC,6DAAC,YAAD;AAAA;AAAA;AAAA;AAAA,SAAQ,KADV;AAAA;AAAA;AAAA;AAAA,SAEA;AAEJ;",
-  "names": []
-}

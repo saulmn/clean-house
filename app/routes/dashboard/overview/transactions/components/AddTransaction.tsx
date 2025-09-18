@@ -29,7 +29,7 @@ import { cn } from "~/utils/cn";
 export default function AddTransaction() {
   const [companyId, setCompanyId] = useState("");
   const [open, setOpen] = useState(false);
-  const transactionFetcher = useFetcher();
+  const transactionFetcher = useFetcher<{ success?: boolean; error?: string | boolean }>();
   const actionData = transactionFetcher.data;
 
   const isSubmitting = transactionFetcher.state !== "idle";
@@ -119,7 +119,7 @@ export default function AddTransaction() {
                   label="Enter amount"
                   placeholder="Amount"
                   className="w-full pl-10"
-                  error={actionData?.error}
+                  error={actionData?.error ? String(actionData.error) : undefined}
                 />
               </div>
 

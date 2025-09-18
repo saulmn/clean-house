@@ -3,17 +3,17 @@ import { useLoaderData } from "@remix-run/react";
 import { NotificationItem } from "~/components/admin";
 import { Breadcrumb, Card, CardContent, Container } from "~/components/ui";
 import { json } from "@remix-run/node";
-import type { V2_MetaFunction, LoaderArgs } from "@remix-run/node";
+import type { MetaFunction, LoaderFunctionArgs } from "@remix-run/node";
 // utils
 import { formatToNow } from "~/utils/formatDate";
 //
 import { prisma } from "~/db.server";
 
-export const meta: V2_MetaFunction = () => [
+export const meta: MetaFunction = () => [
   { title: "Notifications | Remix Template" },
 ];
 
-export async function loader({ request }: LoaderArgs) {
+export async function loader({ request }: LoaderFunctionArgs) {
   const notifications = await prisma.notification.findMany({
     orderBy: { createdAt: "desc" },
   });

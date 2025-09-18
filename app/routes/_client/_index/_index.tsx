@@ -1,9 +1,9 @@
-import type { V2_MetaFunction } from "@remix-run/node";
+import type { MetaFunction } from "@remix-run/node";
 
 import { Features, Hero, Solutions, Trusted } from "./Components";
 import { CallToAction, Testimonial } from "../components";
 
-export const meta: V2_MetaFunction = () => [
+export const meta: MetaFunction = () => [
   { title: "Finlab - Remix Full Stack Client and Admin Finance Template" },
   {
     name: "theme-color",

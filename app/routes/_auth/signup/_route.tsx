@@ -9,7 +9,7 @@ import {
   useSearchParams,
 } from "@remix-run/react";
 import { conform, useForm } from "@conform-to/react";
-import type { ActionArgs, LoaderArgs, V2_MetaFunction } from "@remix-run/node";
+import type { ActionFunctionArgs, LoaderFunctionArgs, MetaFunction } from "@remix-run/node";
 import { json, redirect } from "@remix-run/node";
 import { Loader2 } from "lucide-react";
 //components
@@ -38,11 +38,11 @@ const schema = z.object({
   redirectTo: z.string(),
 });
 
-export const meta: V2_MetaFunction = () => [
+export const meta: MetaFunction = () => [
   { title: "Sign up | Remix Template" },
 ];
 
-export const loader = async ({ request }: LoaderArgs) => {
+export const loader = async ({ request }: LoaderFunctionArgs) => {
   const userId = await getUserId(request);
 
   if (userId) return redirect("/dashboard/overview");
@@ -50,7 +50,7 @@ export const loader = async ({ request }: LoaderArgs) => {
   return json({});
 };
 
-export const action = async ({ request }: ActionArgs) => {
+export const action = async ({ request }: ActionFunctionArgs) => {
   const formData = await request.formData();
   const submission = parse(formData, { schema });
 

@@ -1,9 +1,9 @@
-import type { V2_MetaFunction } from "@remix-run/node";
+import type { MetaFunction } from "@remix-run/node";
 // components
 import { CallToAction } from "../../components";
 import { Benefit, FAQ, Hero, PartnerForm } from "./components";
 
-export const meta: V2_MetaFunction = () => [
+export const meta: MetaFunction = () => [
   { title: "Partner | Remix Template" },
 ];
 

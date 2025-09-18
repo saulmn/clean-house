@@ -22,7 +22,7 @@ import NotFundQuestion from "./NotFundQuestion";
 export default function SearchCard() {
   const { faqs } = useLoaderData<typeof loader>();
 
-  const searchQuestionFetcher = useFetcher();
+  const searchQuestionFetcher = useFetcher<typeof loader>();
   console.log("searchQuestionFetcher", searchQuestionFetcher.data);
 
   const data = searchQuestionFetcher.data

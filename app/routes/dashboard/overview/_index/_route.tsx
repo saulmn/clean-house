@@ -1,6 +1,6 @@
-import type { V2_MetaFunction } from "@remix-run/node";
+import type { MetaFunction } from "@remix-run/node";
 import { json } from "@remix-run/node";
-import { ClientOnly } from "remix-utils";
+import { ClientOnly } from "remix-utils/client-only";
 import { useLoaderData } from "@remix-run/react";
 // components
 import { PockedPlans, RecentActivity } from "./components";
@@ -23,7 +23,7 @@ import { getContacts } from "~/models/contact.server";
 //
 import { prisma } from "~/db.server";
 
-export const meta: V2_MetaFunction = () => [
+export const meta: MetaFunction = () => [
   { title: "Dashboard | Remix Template" },
 ];
 

@@ -1,4 +1,4 @@
-import type { V2_MetaFunction, ActionArgs } from "@remix-run/node";
+import type { MetaFunction, ActionFunctionArgs } from "@remix-run/node";
 import {
   Card,
   Button,
@@ -23,7 +23,7 @@ import { Loader2 } from "lucide-react";
 import { InfoTooltip } from "~/components/admin";
 import { cn } from "~/utils/cn";
 
-export const meta: V2_MetaFunction = () => [
+export const meta: MetaFunction = () => [
   { title: "Settings: Security | Remix templates" },
 ];
 
@@ -56,7 +56,7 @@ const schema = z
     }
   });
 
-export async function action({ request }: ActionArgs) {
+export async function action({ request }: ActionFunctionArgs) {
   const userId = await requireUserId(request);
   const formData = await request.formData();
 

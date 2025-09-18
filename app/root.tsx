@@ -1,10 +1,7 @@
 import { useEffect } from "react";
 import { cssBundleHref } from "@remix-run/css-bundle";
-import type {
-  LinksFunction,
-  LoaderArgs,
-  V2_MetaFunction,
-} from "@remix-run/node";
+import type { LoaderFunctionArgs, LinksFunction } from "@remix-run/node";
+import type { MetaFunction } from "@remix-run/react";
 import { json } from "@remix-run/node";
 import {
   Links,
@@ -40,7 +37,7 @@ export const links: LinksFunction = () => [
   ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
 ];
 
-export const meta: V2_MetaFunction = () => {
+export const meta: MetaFunction = () => {
   return [
     {
       title: "Finlab - Remix Full Stack Client and Admin Finance Template",
@@ -70,7 +67,7 @@ export const meta: V2_MetaFunction = () => {
   ];
 };
 
-export const loader = async ({ request }: LoaderArgs) => {
+export const loader = async ({ request }: LoaderFunctionArgs) => {
   return json({
     user: await getUser(request),
     gaTrackingId: process.env.GA_TRACKING_ID,

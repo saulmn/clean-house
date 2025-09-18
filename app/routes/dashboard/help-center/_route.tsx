@@ -1,16 +1,16 @@
 import { json } from "@remix-run/node";
-import type { V2_MetaFunction, LoaderArgs } from "@remix-run/node";
+import type { MetaFunction, LoaderFunctionArgs } from "@remix-run/node";
 // components
 import { Breadcrumb, Container } from "~/components/ui";
 import { SearchCard } from "./components";
 //
 import { prisma } from "~/db.server";
 
-export const meta: V2_MetaFunction = () => [
+export const meta: MetaFunction = () => [
   { title: "Help center | Remix Template" },
 ];
 
-export async function loader({ request }: LoaderArgs) {
+export async function loader({ request }: LoaderFunctionArgs) {
   let url = new URL(request.url);
   let query = url.searchParams.get("query");
 
