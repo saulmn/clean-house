@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../app/components/Logo.tsx"],
+  "sourcesContent": ["import { Link } from \"@remix-run/react\";\n// components\nimport { Badge } from \"./ui\";\n\nexport default function Logo({ primary = true }: { primary?: boolean }) {\n  return (\n    <div>\n      {primary ? (\n        <Link to=\"/\" className=\"flex items-center gap-1\">\n          <img src=\"/images/logo.svg\" alt=\"Finlab Logo\" />\n          <Badge size=\"sm\" className=\"h-min\">\n            v1.0.0\n          </Badge>\n        </Link>\n      ) : (\n        <Link to=\"/\" className=\"flex items-center gap-1\">\n          <img src=\"/images/logo-secondary.svg\" alt=\"Finlab Logo\" />\n          <Badge size=\"sm\" className=\"h-min\">\n            v1.0.0\n          </Badge>\n        </Link>\n      )}\n    </div>\n  );\n}\n"],
+  "mappings": ";;;;;;;;;;;;AASU;AALK,SAAR,KAAsB,EAAE,UAAU,KAAK,GAA0B;AACtE,SACE,mDAAC,SACE,oBACC,mDAAC,QAAK,IAAG,KAAI,WAAU,2BACrB;AAAA,uDAAC,SAAI,KAAI,oBAAmB,KAAI,iBAAhC;AAAA;AAAA;AAAA;AAAA,WAA8C;AAAA,IAC9C,mDAAC,SAAM,MAAK,MAAK,WAAU,SAAQ,sBAAnC;AAAA;AAAA;AAAA;AAAA,WAEA;AAAA,OAJF;AAAA;AAAA;AAAA;AAAA,SAKA,IAEA,mDAAC,QAAK,IAAG,KAAI,WAAU,2BACrB;AAAA,uDAAC,SAAI,KAAI,8BAA6B,KAAI,iBAA1C;AAAA;AAAA;AAAA;AAAA,WAAwD;AAAA,IACxD,mDAAC,SAAM,MAAK,MAAK,WAAU,SAAQ,sBAAnC;AAAA;AAAA;AAAA;AAAA,WAEA;AAAA,OAJF;AAAA;AAAA;AAAA;AAAA,SAKA,KAdJ;AAAA;AAAA;AAAA;AAAA,SAgBA;AAEJ;",
+  "names": []
+}

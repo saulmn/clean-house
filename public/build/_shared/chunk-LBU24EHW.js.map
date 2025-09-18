@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../app/utils/setting.ts"],
+  "sourcesContent": ["export const BUY_URL = \"\";\n"],
+  "mappings": ";AAAO,IAAM,UAAU;",
+  "names": []
+}
