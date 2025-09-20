@@ -1,5 +1,5 @@
+import { broadcastDevReady } from "@remix-run/node";
 import path from "path";
-
 import prom from "@isaacs/express-prometheus-middleware";
 import { createRequestHandler } from "@remix-run/express";
 import { installGlobals } from "@remix-run/node";
@@ -82,27 +82,32 @@ app.use(morgan("tiny"));
 
 const MODE = process.env.NODE_ENV;
 const BUILD_DIR = path.join(process.cwd(), "build");
+const BUILD_FILE = path.resolve(BUILD_DIR, "index.mjs");
 
-app.all(
-  "*",
-  MODE === "production"
-    ? createRequestHandler({ build: require(BUILD_DIR) })
-    : (...args) => {
-        purgeRequireCache();
-        const requestHandler = createRequestHandler({
-          build: require(BUILD_DIR),
-          mode: MODE,
-        });
-        return requestHandler(...args);
-      }
-);
+// In production, import the build once and reuse it. In dev, bust the import cache.
+let prodBuildPromise: Promise<any> | null = null;
+if (MODE === "production") {
+  prodBuildPromise = import(BUILD_FILE);
+}
+
+app.all("*", async (...args) => {
+  const build =
+    MODE === "production"
+      ? await prodBuildPromise!
+      : await import(`${BUILD_FILE}?update=${Date.now()}`);
+  const requestHandler = createRequestHandler({ build, mode: MODE });
+  return requestHandler(...args);
+});
 
 const port = process.env.PORT || 3010;
 
-app.listen(port, () => {
+app.listen(port, async () => {
   // require the built app so we're ready when the first request comes in
-  require(BUILD_DIR);
+  await (MODE === "production"
+    ? prodBuildPromise
+    : import(`${BUILD_FILE}?update=${Date.now()}`));
   console.log(`✅ app ready: http://localhost:${port}`);
+  broadcastDevReady(await import(BUILD_FILE));
 });
 
 const metricsPort = process.env.METRICS_PORT || 3011;
@@ -111,16 +116,4 @@ metricsApp.listen(metricsPort, () => {
   console.log(`✅ metrics ready: http://localhost:${metricsPort}/metrics`);
 });
 
-function purgeRequireCache() {
-  // purge require cache on requests for "server side HMR" this won't let
-  // you have in-memory objects between requests in development,
-  // alternatively you can set up nodemon/pm2-dev to restart the server on
-  // file changes, we prefer the DX of this though, so we've included it
-  // for you by default
-  for (const key in require.cache) {
-    if (key.startsWith(BUILD_DIR)) {
-      // eslint-disable-next-line @typescript-eslint/no-dynamic-delete
-      delete require.cache[key];
-    }
-  }
-}
+// Note: ESM imports are cached separately; in dev we bust the cache via a query param.

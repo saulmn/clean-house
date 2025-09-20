@@ -1,4 +1,6 @@
-import Marquee from "react-fast-marquee";
+import { ClientOnly } from "remix-utils/client-only";
+import * as MarqueeNS from "react-fast-marquee";
+const Marquee: any = (MarqueeNS as any).default ?? (MarqueeNS as any);
 // components
 import { Button, Container, Heading, Paragraph } from "~/components/ui";
 
@@ -35,35 +37,43 @@ export default function Trusted() {
       </Container>
 
       <div className="min-h-[40px] space-y-6">
-        <Marquee>
-          {COMPANIES.map((item, i) => (
-            <div
-              key={item.label}
-              className="mx-3 flex min-w-[200px] items-center justify-center rounded-2xl bg-[#353E4A] py-10"
-            >
-              <img
-                src={item.image}
-                alt={item.label}
-                className="mx-auto h-10 w-20"
-              />
-            </div>
-          ))}
-        </Marquee>
+        <ClientOnly>
+          {() => (
+              <Marquee>
+                {COMPANIES.map((item, i) => (
+                  <div
+                    key={item.label}
+                    className="mx-3 flex min-w-[200px] items-center justify-center rounded-2xl bg-[#353E4A] py-10"
+                  >
+                    <img
+                      src={item.image}
+                      alt={item.label}
+                      className="mx-auto h-10 w-20"
+                    />
+                  </div>
+                ))}
+              </Marquee>
+          )}
+        </ClientOnly>
 
-        <Marquee direction="right">
-          {COMPANIES.map((item) => (
-            <div
-              key={item.label}
-              className="mx-3 flex min-w-[200px] items-center justify-center rounded-2xl bg-[#353E4A] py-10"
-            >
-              <img
-                src={item.image}
-                alt={item.label}
-                className="mx-auto h-10 w-20"
-              />
-            </div>
-          ))}
-        </Marquee>
+        <ClientOnly>
+          {() => (
+              <Marquee direction="right">
+                {COMPANIES.map((item) => (
+                  <div
+                    key={item.label}
+                    className="mx-3 flex min-w-[200px] items-center justify-center rounded-2xl bg-[#353E4A] py-10"
+                  >
+                    <img
+                      src={item.image}
+                      alt={item.label}
+                      className="mx-auto h-10 w-20"
+                    />
+                  </div>
+                ))}
+              </Marquee>
+          )}
+        </ClientOnly>
       </div>
     </section>
   );
