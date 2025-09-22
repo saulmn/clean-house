@@ -24,16 +24,16 @@ export default function Hero() {
           <div className="text-center lg:text-left">
             <Heading
               variant="h1"
-              className="mb-4 font-bold text-[#1B2632] lg:leading-tight"
+              className="mb-4 font-bold text-center lg:leading-tight"
             >
               Clean House, artículos para la limpieza del hogar
             </Heading>
             <Paragraph
               variant="body1"
-              className="mx-auto max-w-2xl text-[#4B5563] lg:mx-0"
+              className="mx-auto text-center max-w-2xl text-muted-foreground lg:mx-0"
             >
               Limpieza natural, herramientas, y recargas para hogares y negocios.
-              Envío rápido y precios justos.
+              Venta al por menor.
             </Paragraph>
           </div>
 
