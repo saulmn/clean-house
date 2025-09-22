@@ -1,14 +1,14 @@
 import type { ActionFunctionArgs } from "@remix-run/node";
 import { json } from "@remix-run/node";
 // models
-import { updateUserBalance } from "~/models/user.server";
+import { updateUserBalance } from "@/models/user.server";
 // session
-import { getUser, requireUserId } from "~/session.server";
+import { getUser, requireUserId } from "@/session.server";
 // utils
-import { formatCurrency } from "~/utils/formatNumber";
-import { getTransactionNumber } from "~/utils/getTransactionNumber";
+import { formatCurrency } from "@/utils/formatNumber";
+import { getTransactionNumber } from "@/utils/getTransactionNumber";
 //
-import { prisma } from "~/db.server";
+import { prisma } from "@/db.server";
 
 export async function action({ request }: ActionFunctionArgs) {
   const userId = await requireUserId(request);

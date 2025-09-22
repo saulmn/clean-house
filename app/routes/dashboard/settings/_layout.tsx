@@ -1,5 +1,5 @@
 import { Outlet } from "@remix-run/react";
-import { Breadcrumb, Container } from "~/components/ui";
+import { Breadcrumb, Container } from "@/components/ui";
 import { SettingNav } from "./components";
 import { MobileSettingNav } from "./components/SettingNav";
 

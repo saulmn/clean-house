@@ -1,13 +1,13 @@
 import { useLoaderData } from "@remix-run/react";
 // components
-import { NotificationItem } from "~/components/admin";
-import { Breadcrumb, Card, CardContent, Container } from "~/components/ui";
+import { NotificationItem } from "@/components/admin";
+import { Breadcrumb, Card, CardContent, Container } from "@/components/ui";
 import { json } from "@remix-run/node";
 import type { MetaFunction, LoaderFunctionArgs } from "@remix-run/node";
 // utils
-import { formatToNow } from "~/utils/formatDate";
+import { formatToNow } from "@/utils/formatDate";
 //
-import { prisma } from "~/db.server";
+import { prisma } from "@/db.server";
 
 export const meta: MetaFunction = () => [
   { title: "Notifications | Remix Template" },

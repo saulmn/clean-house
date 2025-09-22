@@ -1,10 +1,10 @@
 import { json } from "@remix-run/node";
 import type { MetaFunction, LoaderFunctionArgs } from "@remix-run/node";
 // components
-import { Breadcrumb, Container } from "~/components/ui";
+import { Breadcrumb, Container } from "@/components/ui";
 import { SearchCard } from "./components";
 //
-import { prisma } from "~/db.server";
+import { prisma } from "@/db.server";
 
 export const meta: MetaFunction = () => [
   { title: "Help center | Remix Template" },

@@ -6,10 +6,10 @@ import {
   CardContent,
   CardHeader,
   CardTitle,
-} from "~/components/ui";
-import { InfoTooltip } from "~/components/admin";
+} from "@/components/ui";
+import { InfoTooltip } from "@/components/admin";
 //
-import type { CardData } from "~/utils/payment";
+import type { CardData } from "@/utils/payment";
 
 type CardDesignProps = {
   card: CardData;

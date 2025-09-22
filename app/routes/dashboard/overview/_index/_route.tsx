@@ -10,7 +10,7 @@ import {
   ExpenseCategory,
   IncomeAnalysis,
   TotalBalance,
-} from "~/components/admin";
+} from "@/components/admin";
 // models
 import {
   getExpenseAnalysisData,
@@ -18,10 +18,10 @@ import {
   getExpenseDataForYearChart,
   getIncomeAnalysisData,
   getIncomeDataForYearChart,
-} from "~/models/transaction.server";
-import { getContacts } from "~/models/contact.server";
+} from "@/models/transaction.server";
+import { getContacts } from "@/models/contact.server";
 //
-import { prisma } from "~/db.server";
+import { prisma } from "@/db.server";
 
 export const meta: MetaFunction = () => [
   { title: "Dashboard | Remix Template" },

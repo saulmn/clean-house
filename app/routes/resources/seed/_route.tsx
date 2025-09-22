@@ -1,14 +1,14 @@
 import { json, type LoaderFunctionArgs } from "@remix-run/node";
 import bcrypt from "bcryptjs";
 // data
-import { ACCOUNTANTS } from "~/data/accountants";
-import { COMPANIES } from "~/data/companies";
-import { CONTACTS } from "~/data/contacts";
-import { TRANSACTIONS } from "~/data/transactions";
-import { COUNTRIES } from "~/data/countries";
-import { FAQS } from "~/data/faqs";
+import { ACCOUNTANTS } from "@/data/accountants";
+import { COMPANIES } from "@/data/companies";
+import { CONTACTS } from "@/data/contacts";
+import { TRANSACTIONS } from "@/data/transactions";
+import { COUNTRIES } from "@/data/countries";
+import { FAQS } from "@/data/faqs";
 //
-import { prisma } from "~/db.server";
+import { prisma } from "@/db.server";
 
 export async function loader({ request }: LoaderFunctionArgs) {
   const email = "demo@finlab.com";

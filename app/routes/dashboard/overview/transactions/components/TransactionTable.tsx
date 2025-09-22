@@ -16,7 +16,7 @@ import {
 } from "@tanstack/react-table";
 import { Fragment, useMemo, useState } from "react";
 // components
-import { DataTablePagination } from "~/components/admin";
+import { DataTablePagination } from "@/components/admin";
 import {
   Button,
   Input,
@@ -26,10 +26,10 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "~/components/ui";
+} from "@/components/ui";
 import TransactionTableFilterInputs from "./TransactionTableFilterInputs";
 // utils
-import { cn } from "~/utils/cn";
+import { cn } from "@/utils/cn";
 import AddTransaction from "./AddTransaction";
 
 interface DataTableProps<TData, TValue> {

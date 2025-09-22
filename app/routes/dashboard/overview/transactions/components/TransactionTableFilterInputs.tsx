@@ -18,9 +18,9 @@ import {
   SelectValue,
   ScrollArea,
   ScrollBar,
-} from "~/components/ui";
+} from "@/components/ui";
 // utils
-import { cn } from "~/utils/cn";
+import { cn } from "@/utils/cn";
 
 export default function TransactionTableFilterInputs() {
   const [searchParams, setSearchParams] = useSearchParams();

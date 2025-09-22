@@ -14,12 +14,12 @@ import {
   DialogTrigger,
   Input,
   Paragraph,
-} from "~/components/ui";
+} from "@/components/ui";
 import { useEffect, useRef, useState } from "react";
 import type { Contact } from "@prisma/client";
 import type { SerializeFrom } from "@remix-run/node";
 
-import { cn } from "~/utils/cn";
+import { cn } from "@/utils/cn";
 
 type SentMoneyDialogProps = {
   contacts: SerializeFrom<Contact[]>;

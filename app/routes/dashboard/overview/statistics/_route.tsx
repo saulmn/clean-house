@@ -7,7 +7,7 @@ import {
   ExpenseAnalysis,
   ExpenseCategory,
   IncomeAnalysis,
-} from "~/components/admin";
+} from "@/components/admin";
 import { BalanceStatistics, LastTransaction } from "./components";
 // models
 import {
@@ -16,9 +16,9 @@ import {
   getExpenseDataForYearChart,
   getIncomeAnalysisData,
   getIncomeDataForYearChart,
-} from "~/models/transaction.server";
+} from "@/models/transaction.server";
 //
-import { prisma } from "~/db.server";
+import { prisma } from "@/db.server";
 
 export const meta: MetaFunction = () => [
   { title: "Statistics | Remix Template" },

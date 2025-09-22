@@ -1,6 +1,6 @@
 import { Link } from "@remix-run/react";
 // components
-import { InfoTooltip } from "~/components/admin";
+import { InfoTooltip } from "@/components/admin";
 import {
   Card,
   CardContent,
@@ -8,7 +8,7 @@ import {
   CardHeader,
   CardTitle,
   Paragraph,
-} from "~/components/ui";
+} from "@/components/ui";
 
 export default function PockedPlans() {
   return (

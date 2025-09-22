@@ -1,8 +1,8 @@
 import { NavLink, Outlet } from "@remix-run/react";
 // components
-import { Breadcrumb, Container, ScrollArea, ScrollBar } from "~/components/ui";
+import { Breadcrumb, Container, ScrollArea, ScrollBar } from "@/components/ui";
 // utils
-import { useUser } from "~/utils";
+import { useUser } from "@/utils";
 
 export default function _route() {
   const user = useUser();

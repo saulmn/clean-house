@@ -12,9 +12,9 @@ import {
   DropdownMenuLabel,
   DropdownMenuTrigger,
   Paragraph,
-} from "~/components/ui";
+} from "@/components/ui";
 // utils
-import { useUser } from "~/utils";
+import { useUser } from "@/utils";
 
 export default function UserNav() {
   const user = useUser();

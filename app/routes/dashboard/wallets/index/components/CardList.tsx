@@ -1,7 +1,7 @@
 import Card from "react-credit-cards-2";
 import { Link, useLoaderData } from "@remix-run/react";
 // components
-import { InfoTooltip } from "~/components/admin";
+import { InfoTooltip } from "@/components/admin";
 import {
   Card as CardComponent,
   CardContent,
@@ -9,7 +9,7 @@ import {
   CardHeader,
   CardTitle,
   ScrollArea,
-} from "~/components/ui";
+} from "@/components/ui";
 import NewCardDialog from "./NewCardDialog";
 //
 import type { loader } from "../_route";

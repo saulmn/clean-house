@@ -8,7 +8,7 @@ import {
   CardFooter,
   buttonVariants,
   CardContent,
-} from "~/components/ui";
+} from "@/components/ui";
 import bcrypt from "bcryptjs";
 import { json } from "@remix-run/node";
 import { conform, useForm } from "@conform-to/react";
@@ -16,12 +16,12 @@ import { parse } from "@conform-to/zod";
 import { z } from "zod";
 import { Link, useFetcher } from "@remix-run/react";
 // session
-import { requireUserId } from "~/session.server";
+import { requireUserId } from "@/session.server";
 //
-import { prisma } from "~/db.server";
+import { prisma } from "@/db.server";
 import { Loader2 } from "lucide-react";
-import { InfoTooltip } from "~/components/admin";
-import { cn } from "~/utils/cn";
+import { InfoTooltip } from "@/components/admin";
+import { cn } from "@/utils/cn";
 
 export const meta: MetaFunction = () => [
   { title: "Settings: Security | Remix templates" },

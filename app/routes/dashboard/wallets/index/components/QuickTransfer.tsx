@@ -12,10 +12,10 @@ import {
   CardTitle,
   Input,
   Paragraph,
-} from "~/components/ui";
-import { InfoTooltip } from "~/components/admin";
+} from "@/components/ui";
+import { InfoTooltip } from "@/components/admin";
 // utils
-import { cn } from "~/utils/cn";
+import { cn } from "@/utils/cn";
 //
 import type { Contact } from "@prisma/client";
 import type { SerializeFrom } from "@remix-run/node";

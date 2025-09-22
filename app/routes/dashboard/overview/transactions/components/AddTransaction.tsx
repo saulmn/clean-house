@@ -21,10 +21,10 @@ import {
   SelectLabel,
   SelectTrigger,
   SelectValue,
-} from "~/components/ui";
-import { CompaniesCombobox } from "~/routes/resources/companies-combobox/_route";
+} from "@/components/ui";
+import { CompaniesCombobox } from "@/routes/resources/companies-combobox/_route";
 // utils
-import { cn } from "~/utils/cn";
+import { cn } from "@/utils/cn";
 
 export default function AddTransaction() {
   const [companyId, setCompanyId] = useState("");

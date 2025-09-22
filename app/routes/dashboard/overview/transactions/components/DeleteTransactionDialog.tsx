@@ -12,7 +12,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "~/components/ui";
+} from "@/components/ui";
 
 export default function DeleteTransactionDialog({
   transactionId,

@@ -8,12 +8,12 @@ import invariant from "tiny-invariant";
 import { z } from "zod";
 import { parse } from "@conform-to/zod";
 // components
-import { Breadcrumb, Container } from "~/components/ui";
+import { Breadcrumb, Container } from "@/components/ui";
 import { CardForm } from "./components";
 //
-import { prisma } from "~/db.server";
-import { requireUserId } from "~/session.server";
-import { updateUserBalance } from "~/models/user.server";
+import { prisma } from "@/db.server";
+import { requireUserId } from "@/session.server";
+import { updateUserBalance } from "@/models/user.server";
 
 export const meta: MetaFunction = () => {
   return [

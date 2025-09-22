@@ -13,10 +13,10 @@ import {
   Sheet,
   SheetContent,
   SheetTrigger,
-} from "~/components/ui";
+} from "@/components/ui";
 import UserNav from "./UserNav";
 import Notification from "./Notification";
-import Logo from "~/components/Logo";
+import Logo from "@/components/Logo";
 
 export default function Header() {
   return (

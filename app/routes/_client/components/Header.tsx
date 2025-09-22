@@ -1,11 +1,11 @@
 import { Link } from "@remix-run/react";
 // components
-import Logo from "~/components/Logo";
+import Logo from "@/components/Logo";
 import { MobileNavMenu } from "./MobileNavMenu";
-import { Container, buttonVariants } from "~/components/ui";
+import { Container, buttonVariants } from "@/components/ui";
 // utils
-import { cn } from "~/utils/cn";
-import { BUY_URL } from "~/utils/setting";
+import { cn } from "@/utils/cn";
+import { BUY_URL } from "@/utils/setting";
 
 export default function Header() {
   return (

@@ -8,14 +8,14 @@ import {
   CardContent,
   CardHeader,
   CardTitle,
-} from "~/components/ui";
-import { InfoTooltip } from "~/components/admin";
+} from "@/components/ui";
+import { InfoTooltip } from "@/components/admin";
 // utils
-import { formatCurrency } from "~/utils/formatNumber";
-import { formatDate } from "~/utils/formatDate";
+import { formatCurrency } from "@/utils/formatNumber";
+import { formatDate } from "@/utils/formatDate";
 //
 import type { loader } from "../_route";
-import { cn } from "~/utils/cn";
+import { cn } from "@/utils/cn";
 
 export default function RecentActivity() {
   const { recentTransactions } = useLoaderData<typeof loader>();

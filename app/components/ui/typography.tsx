@@ -3,7 +3,7 @@ import { cva } from "class-variance-authority";
 import React from "react";
 import type { HTMLAttributes } from "react";
 // utils
-import { cn } from "~/utils/cn";
+import { cn } from "@/utils/cn";
 
 const headingVariants = cva("text-secondary-500", {
   variants: {

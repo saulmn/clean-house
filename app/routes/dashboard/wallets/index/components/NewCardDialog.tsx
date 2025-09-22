@@ -16,14 +16,14 @@ import {
   DialogTrigger,
   Input,
   ScrollArea,
-} from "~/components/ui";
+} from "@/components/ui";
 // utils
-import type { CardData } from "~/utils/payment";
+import type { CardData } from "@/utils/payment";
 import {
   formatCVC,
   formatCreditCardNumber,
   formatExpirationDate,
-} from "~/utils/payment";
+} from "@/utils/payment";
 
 export default function NewCardDialog() {
   const [card, setCard] = useState<CardData>({

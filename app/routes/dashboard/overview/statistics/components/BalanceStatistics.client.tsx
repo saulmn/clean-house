@@ -8,12 +8,12 @@ import {
   CardTitle,
   ScrollArea,
   ScrollBar,
-} from "~/components/ui";
-import { InfoTooltip } from "~/components/admin";
+} from "@/components/ui";
+import { InfoTooltip } from "@/components/admin";
 
 // utils
-import { formatCurrency } from "~/utils/formatNumber";
-import { baseChartOption } from "~/utils/baseChartOption";
+import { formatCurrency } from "@/utils/formatNumber";
+import { baseChartOption } from "@/utils/baseChartOption";
 //
 import type { ApexOptions } from "apexcharts";
 import type { SerializeFrom } from "@remix-run/node";

@@ -5,12 +5,12 @@ import {
   CardHeader,
   CardTitle,
   Heading,
-} from "~/components/ui";
+} from "@/components/ui";
 import InfoTooltip from "./InfoTooltip";
-import { ReceiveMoneyDialog, SentMoneyDialog } from "~/components/admin";
+import { ReceiveMoneyDialog, SentMoneyDialog } from "@/components/admin";
 // utils
-import { useUser } from "~/utils";
-import { formatCurrency } from "~/utils/formatNumber";
+import { useUser } from "@/utils";
+import { formatCurrency } from "@/utils/formatNumber";
 //
 import type { SerializeFrom } from "@remix-run/node";
 import type { Contact } from "@prisma/client";

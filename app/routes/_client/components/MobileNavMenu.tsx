@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { NavLink } from "@remix-run/react";
 // components
-import { Button, Sheet, SheetContent, SheetTrigger } from "~/components/ui";
-import Logo from "~/components/Logo";
+import { Button, Sheet, SheetContent, SheetTrigger } from "@/components/ui";
+import Logo from "@/components/Logo";
 
 export function MobileNavMenu() {
   const [open, setOpen] = useState(false);

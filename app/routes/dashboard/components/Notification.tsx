@@ -11,13 +11,13 @@ import {
   DropdownMenuTrigger,
   Paragraph,
   buttonVariants,
-} from "~/components/ui";
-import { InfoTooltip } from "~/components/admin";
+} from "@/components/ui";
+import { InfoTooltip } from "@/components/admin";
 // utils
-import { cn } from "~/utils/cn";
-import { formatToNow } from "~/utils/formatDate";
+import { cn } from "@/utils/cn";
+import { formatToNow } from "@/utils/formatDate";
 // hooks
-import { useResponsive } from "~/hooks/useResponsive";
+import { useResponsive } from "@/hooks/useResponsive";
 //
 import type { loader } from "../_layout";
 

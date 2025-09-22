@@ -1,9 +1,9 @@
 import { type ActionFunctionArgs, redirect } from "@remix-run/node";
 // models
-import { updateUserBalance } from "~/models/user.server";
+import { updateUserBalance } from "@/models/user.server";
 //
-import { prisma } from "~/db.server";
-import { requireUserId } from "~/session.server";
+import { prisma } from "@/db.server";
+import { requireUserId } from "@/session.server";
 
 export async function action({ request }: ActionFunctionArgs) {
   const formData = await request.formData();

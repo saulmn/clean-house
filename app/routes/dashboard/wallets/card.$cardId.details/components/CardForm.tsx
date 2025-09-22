@@ -20,16 +20,16 @@ import {
   CardTitle,
   Input,
   buttonVariants,
-} from "~/components/ui";
+} from "@/components/ui";
 import CardDesign from "./CardDesign";
-import { InfoTooltip } from "~/components/admin";
+import { InfoTooltip } from "@/components/admin";
 // utils
 import {
   formatCVC,
   formatCreditCardNumber,
   formatExpirationDate,
-} from "~/utils/payment";
-import type { CardData } from "~/utils/payment";
+} from "@/utils/payment";
+import type { CardData } from "@/utils/payment";
 //
 import type { action, loader } from "../_route";
 import { editCardSchema } from "../_route";

@@ -16,11 +16,11 @@ import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "~/components/ui";
+} from "@/components/ui";
 // utils
-import { cn } from "~/utils/cn";
+import { cn } from "@/utils/cn";
 //
-import { prisma } from "~/db.server";
+import { prisma } from "@/db.server";
 
 export async function loader({ request }: LoaderFunctionArgs) {
   let url = new URL(request.url);

@@ -1,6 +1,6 @@
 import { Link, Outlet } from "@remix-run/react";
 // components
-import { Heading, Paragraph } from "~/components/ui";
+import { Heading, Paragraph } from "@/components/ui";
 
 export default function _layout() {
   return (

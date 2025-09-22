@@ -10,14 +10,14 @@ import {
   CardTitle,
   Label,
   Switch,
-} from "~/components/ui";
-import { InfoTooltip } from "~/components/admin";
+} from "@/components/ui";
+import { InfoTooltip } from "@/components/admin";
 // utils
-import { baseChartOption } from "~/utils/baseChartOption";
+import { baseChartOption } from "@/utils/baseChartOption";
 //
 import type { ApexOptions } from "apexcharts";
 import type { loader } from "../_route";
-import { formatCurrency } from "~/utils/formatNumber";
+import { formatCurrency } from "@/utils/formatNumber";
 
 const chartOptions = merge(baseChartOption(), {
   legend: {

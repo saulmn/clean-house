@@ -9,12 +9,12 @@ import {
   TransactionTable,
 } from "./components";
 //
-import { prisma } from "~/db.server";
+import { prisma } from "@/db.server";
 import type { TransactionStatus, TransactionType } from "@prisma/client";
 // utils
-import { getTransactionNumber } from "~/utils/getTransactionNumber";
-import { getUser, requireUserId } from "~/session.server";
-import { updateUserBalance } from "~/models/user.server";
+import { getTransactionNumber } from "@/utils/getTransactionNumber";
+import { getUser, requireUserId } from "@/session.server";
+import { updateUserBalance } from "@/models/user.server";
 
 export const meta: MetaFunction = () => [
   { title: "Transactions | Remix Template" },

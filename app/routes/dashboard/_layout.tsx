@@ -4,8 +4,8 @@ import { Outlet } from "@remix-run/react";
 // components
 import { Header } from "./components";
 //
-import { requireUserId } from "~/session.server";
-import { prisma } from "~/db.server";
+import { requireUserId } from "@/session.server";
+import { prisma } from "@/db.server";
 
 export const loader = async ({ request }: LoaderFunctionArgs) => {
   const userId = await requireUserId(request);

@@ -1,12 +1,12 @@
 import { PrismaClient } from "@prisma/client";
 import bcrypt from "bcryptjs";
 // data
-import { ACCOUNTANTS } from "~/data/accountants";
-import { COMPANIES } from "~/data/companies";
-import { CONTACTS } from "~/data/contacts";
-import { TRANSACTIONS } from "~/data/transactions";
-import { COUNTRIES } from "~/data/countries";
-import { FAQS } from "~/data/faqs";
+import { ACCOUNTANTS } from "@/data/accountants";
+import { COMPANIES } from "@/data/companies";
+import { CONTACTS } from "@/data/contacts";
+import { TRANSACTIONS } from "@/data/transactions";
+import { COUNTRIES } from "@/data/countries";
+import { FAQS } from "@/data/faqs";
 
 const prisma = new PrismaClient();
 

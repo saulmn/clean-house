@@ -1,8 +1,8 @@
 import type { ActionFunctionArgs } from "@remix-run/node";
 import { json } from "@remix-run/node";
-import { prisma } from "~/db.server";
+import { prisma } from "@/db.server";
 //
-import { requireUserId } from "~/session.server";
+import { requireUserId } from "@/session.server";
 
 export async function action({ request }: ActionFunctionArgs) {
   const userId = await requireUserId(request);

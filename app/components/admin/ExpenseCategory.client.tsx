@@ -1,11 +1,11 @@
 import { merge } from "lodash";
 import ReactApexChart from "react-apexcharts";
 // components
-import { Card, CardContent, CardHeader, CardTitle } from "~/components/ui";
-import { InfoTooltip } from "~/components/admin";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui";
+import { InfoTooltip } from "@/components/admin";
 // utils
-import { baseChartOption } from "~/utils/baseChartOption";
-import { formatCurrency } from "~/utils/formatNumber";
+import { baseChartOption } from "@/utils/baseChartOption";
+import { formatCurrency } from "@/utils/formatNumber";
 //
 import type { ApexOptions } from "apexcharts";
 import type { SerializeFrom } from "@remix-run/node";

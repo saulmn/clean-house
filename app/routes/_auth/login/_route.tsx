@@ -14,13 +14,13 @@ import { json, redirect } from "@remix-run/node";
 import bcrypt from "bcryptjs";
 import { Info, Loader2 } from "lucide-react";
 //components
-import { Alert, AlertDescription } from "~/components/ui/alert";
-import { Button, Checkbox, Heading, Input } from "~/components/ui";
+import { Alert, AlertDescription } from "@/components/ui/alert";
+import { Button, Checkbox, Heading, Input } from "@/components/ui";
 // utils
-import { safeRedirect } from "~/utils";
+import { safeRedirect } from "@/utils";
 
-import { prisma } from "~/db.server";
-import { createUserSession, getUserId } from "~/session.server";
+import { prisma } from "@/db.server";
+import { createUserSession, getUserId } from "@/session.server";
 
 const schema = z.object({
   email: z

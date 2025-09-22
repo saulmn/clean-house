@@ -3,18 +3,18 @@ import { useLoaderData } from "@remix-run/react";
 import { ClientOnly } from "remix-utils/client-only";
 import type { LoaderFunctionArgs, MetaFunction } from "@remix-run/node";
 // components
-import { Breadcrumb, Container } from "~/components/ui";
-import { Currency, TotalBalance } from "~/components/admin";
+import { Breadcrumb, Container } from "@/components/ui";
+import { Currency, TotalBalance } from "@/components/admin";
 import { BalanceAnalytics, CardList, QuickTransfer } from "./components";
 // models
-import { getContacts } from "~/models/contact.server";
+import { getContacts } from "@/models/contact.server";
 import {
   getIncomeDataForYearChart,
   getExpenseDataForYearChart,
-} from "~/models/transaction.server";
+} from "@/models/transaction.server";
 //
-import { requireUserId } from "~/session.server";
-import { prisma } from "~/db.server";
+import { requireUserId } from "@/session.server";
+import { prisma } from "@/db.server";
 
 export const meta: MetaFunction = () => [
   { title: "Wallets | Remix Template" },

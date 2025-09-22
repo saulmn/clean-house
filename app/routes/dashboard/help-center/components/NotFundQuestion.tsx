@@ -1,4 +1,4 @@
-import { Heading, Paragraph } from "~/components/ui";
+import { Heading, Paragraph } from "@/components/ui";
 
 export default function NotFundQuestion() {
   return (

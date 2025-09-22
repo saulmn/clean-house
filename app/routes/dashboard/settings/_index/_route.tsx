@@ -8,7 +8,7 @@ import { json } from "@remix-run/node";
 import type { MetaFunction, ActionFunctionArgs } from "@remix-run/node";
 import { conform, useForm } from "@conform-to/react";
 // components
-import { InfoTooltip } from "~/components/admin";
+import { InfoTooltip } from "@/components/admin";
 import {
   Button,
   Card,
@@ -19,15 +19,15 @@ import {
   Input,
   Label,
   buttonVariants,
-} from "~/components/ui";
+} from "@/components/ui";
 // resources
-import { CountriesCombobox } from "~/routes/resources/countries-combobox/_route";
+import { CountriesCombobox } from "@/routes/resources/countries-combobox/_route";
 // utils;
-import { useUser } from "~/utils";
-import { cn } from "~/utils/cn";
+import { useUser } from "@/utils";
+import { cn } from "@/utils/cn";
 //
-import { requireUserId } from "~/session.server";
-import { prisma } from "~/db.server";
+import { requireUserId } from "@/session.server";
+import { prisma } from "@/db.server";
 
 export const meta: MetaFunction = () => [
   { title: "Settings: Personal information | Remix Template" },

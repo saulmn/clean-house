@@ -1,8 +1,8 @@
 import { NavLink } from "@remix-run/react";
 // components
-import { Card, ScrollArea, ScrollBar } from "~/components/ui";
+import { Card, ScrollArea, ScrollBar } from "@/components/ui";
 // utils
-import { cn } from "~/utils/cn";
+import { cn } from "@/utils/cn";
 
 export default function SettingNav() {
   return (

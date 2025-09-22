@@ -1,7 +1,7 @@
 import { Link } from "@remix-run/react";
-import { Container, Heading, Paragraph, buttonVariants } from "~/components/ui";
-import { cn } from "~/utils/cn";
-import Logo from "~/components/Logo";
+import { Container, Heading, Paragraph, buttonVariants } from "@/components/ui";
+import { cn } from "@/utils/cn";
+import Logo from "@/components/Logo";
 
 
 export default function Hero() {
@@ -57,7 +57,7 @@ export default function Hero() {
       <footer className="border-t py-4">
         <Container>
           <p className="text-center text-sm text-muted-foreground">
-            Clean House 2025 - TLX 2025 🐶
+            Clean House 2025 - TLX 2025
           </p>
         </Container>
       </footer>

@@ -1,5 +1,5 @@
 import type { TransactionStatus, TransactionType } from "@prisma/client";
-import { getTransactionNumber } from "~/utils/getTransactionNumber";
+import { getTransactionNumber } from "@/utils/getTransactionNumber";
 
 export const TRANSACTIONS = [
   {

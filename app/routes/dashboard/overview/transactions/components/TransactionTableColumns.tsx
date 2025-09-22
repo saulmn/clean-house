@@ -8,15 +8,15 @@ import {
   Badge,
   Button,
   Checkbox,
-} from "~/components/ui";
+} from "@/components/ui";
 import DeleteTransactionDialog from "./DeleteTransactionDialog";
 // utils
-import { formatDate, formatTime } from "~/utils/formatDate";
-import { formatCurrency } from "~/utils/formatNumber";
-import { cn } from "~/utils/cn";
+import { formatDate, formatTime } from "@/utils/formatDate";
+import { formatCurrency } from "@/utils/formatNumber";
+import { cn } from "@/utils/cn";
 // types
-import type { Status } from "~/types/status";
-import { getStatusColor } from "~/utils/getStatusColor";
+import type { Status } from "@/types/status";
+import { getStatusColor } from "@/utils/getStatusColor";
 
 export type Transaction = {
   id: string;

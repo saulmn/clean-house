@@ -16,10 +16,10 @@ import {
   DialogTrigger,
   Input,
   Paragraph,
-} from "~/components/ui";
+} from "@/components/ui";
 import type { SerializeFrom } from "@remix-run/node";
 // utils
-import { cn } from "~/utils/cn";
+import { cn } from "@/utils/cn";
 
 type SentMoneyDialogProps = {
   contacts: SerializeFrom<Contact[]>;

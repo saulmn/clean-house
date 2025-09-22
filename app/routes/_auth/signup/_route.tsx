@@ -19,13 +19,13 @@ import {
   Input,
   Paragraph,
   buttonVariants,
-} from "~/components/ui";
+} from "@/components/ui";
 // utils
-import { safeRedirect } from "~/utils";
+import { safeRedirect } from "@/utils";
 
-import { createUserSession, getUserId } from "~/session.server";
-import { createUser, getUserByEmail } from "~/models/user.server";
-import { cn } from "~/utils/cn";
+import { createUserSession, getUserId } from "@/session.server";
+import { createUser, getUserByEmail } from "@/models/user.server";
+import { cn } from "@/utils/cn";
 
 const schema = z.object({
   fullName: z.string({ required_error: "Full name is required" }),

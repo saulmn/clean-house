@@ -2,7 +2,7 @@ import type { Row } from "@tanstack/react-table";
 // type
 import type { Transaction } from "./TransactionTableColumns";
 // utils
-import { formatDate } from "~/utils/formatDate";
+import { formatDate } from "@/utils/formatDate";
 
 export default function RenderRowDetails({ row }: { row: Row<Transaction> }) {
   return (

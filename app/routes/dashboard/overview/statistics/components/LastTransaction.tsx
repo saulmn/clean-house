@@ -11,16 +11,16 @@ import {
   CardTitle,
   ScrollArea,
   ScrollBar,
-} from "~/components/ui";
-import { InfoTooltip } from "~/components/admin";
+} from "@/components/ui";
+import { InfoTooltip } from "@/components/admin";
 // utils
-import { cn } from "~/utils/cn";
-import { formatCurrency } from "~/utils/formatNumber";
-import { getStatusColor } from "~/utils/getStatusColor";
-import { formatDate, formatTime } from "~/utils/formatDate";
+import { cn } from "@/utils/cn";
+import { formatCurrency } from "@/utils/formatNumber";
+import { getStatusColor } from "@/utils/getStatusColor";
+import { formatDate, formatTime } from "@/utils/formatDate";
 //
 import type { loader } from "../_route";
-import type { Status } from "~/types/status";
+import type { Status } from "@/types/status";
 
 export default function LastTransaction() {
   const { recentTransactions } = useLoaderData<typeof loader>();

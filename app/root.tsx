@@ -15,8 +15,8 @@ import {
   useNavigation,
 } from "@remix-run/react";
 import NProgress from "nprogress";
-import { getUser } from "~/session.server";
-import stylesheet from "~/styles/tailwind.output.css";
+import { getUser } from "@/session.server";
+import stylesheet from "@/styles/tailwind.output.css";
 
 import slick from "slick-carousel/slick/slick.css";
 import slickTheme from "slick-carousel/slick/slick-theme.css";
@@ -24,7 +24,7 @@ import creditCardsStyle from "react-credit-cards-2/dist/es/styles-compiled.css";
 import phoneInputStye from "react-phone-number-input/style.css";
 import nProgressStyles from "nprogress/nprogress.css";
 
-import * as gtag from "~/utils/gtags.client";
+import * as gtag from "@/utils/gtags.client";
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: stylesheet },

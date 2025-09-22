@@ -5,9 +5,9 @@ import {
   Paragraph,
   ScrollArea,
   ScrollBar,
-} from "~/components/ui";
+} from "@/components/ui";
 // utils
-import { cn } from "~/utils/cn";
+import { cn } from "@/utils/cn";
 
 type QuestionProps = {
   item: {

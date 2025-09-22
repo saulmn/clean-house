@@ -4,7 +4,7 @@ import {
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "~/components/ui";
+} from "@/components/ui";
 
 export default function InfoTooltip({
   message,

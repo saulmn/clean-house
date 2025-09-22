@@ -12,9 +12,9 @@ import {
   Paragraph,
   ScrollArea,
   ScrollBar,
-} from "~/components/ui";
+} from "@/components/ui";
 import QuestionCard from "./QuestionCard";
-import { InfoTooltip } from "~/components/admin";
+import { InfoTooltip } from "@/components/admin";
 //
 import type { loader } from "../_route";
 import NotFundQuestion from "./NotFundQuestion";
