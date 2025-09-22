@@ -1,7 +1,6 @@
 import type { MetaFunction } from "@remix-run/node";
 
-import { Features, Hero, Solutions, Trusted } from "./Components";
-import { CallToAction, Testimonial } from "../components";
+import { Hero } from "./Components";
 
 export const meta: MetaFunction = () => [
   { title: "Finlab - Remix Full Stack Client and Admin Finance Template" },
@@ -15,11 +14,6 @@ export default function Index() {
   return (
     <>
       <Hero />
-      <Solutions />
-      <Features />
-      <Trusted />
-      <Testimonial />
-      <CallToAction />
     </>
   );
 }

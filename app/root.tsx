@@ -24,7 +24,6 @@ import creditCardsStyle from "react-credit-cards-2/dist/es/styles-compiled.css";
 import phoneInputStye from "react-phone-number-input/style.css";
 import nProgressStyles from "nprogress/nprogress.css";
 
-import BuyThisTemplate from "./components/BuyThisTemplate";
 import * as gtag from "~/utils/gtags.client";
 
 export const links: LinksFunction = () => [
@@ -125,7 +124,6 @@ export default function App() {
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
-        <BuyThisTemplate />
       </body>
     </html>
   );
