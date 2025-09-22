@@ -166,7 +166,7 @@ const main = async ({ isTypeScript, packageManager, rootDirectory }) => {
     `vitest.config.${FILE_EXTENSION}`
   );
 
-  const REPLACER = "finlab";
+  const REPLACER = "clean-house";
 
   const DIR_NAME = path.basename(rootDirectory);
   const SUFFIX = getRandomString(2);

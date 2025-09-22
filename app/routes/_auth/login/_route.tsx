@@ -213,7 +213,7 @@ export default function Login() {
       </div>
 
       <div className="absolute hidden text-sm text-secondary-400 lg:bottom-3 lg:block">
-        © 2022 Finlab. All rights reserved.
+      © Clean House 2025 - TLX 2025
       </div>
     </div>
   );

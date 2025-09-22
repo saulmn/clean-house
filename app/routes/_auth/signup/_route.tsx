@@ -200,7 +200,7 @@ export default function SignUp() {
       </div>
 
       <div className="absolute hidden text-sm text-secondary-400 lg:bottom-3 lg:block">
-        © 2022 Finlab. All rights reserved.
+        © 2025 Clean House. All rights reserved.
       </div>
     </div>
   );

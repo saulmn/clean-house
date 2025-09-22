@@ -13,7 +13,7 @@ export default function _layout() {
         <div className=" bg-secondary-500 p-6 lg:p-12">
           <div className="mb-6 h-10">
             <Link to="/">
-              <img src="/images/logo-secondary.svg" alt="Finlab Logo" />
+              <img src="/images/logo-secondary.svg" alt="Clean House Logo" />
             </Link>
           </div>
 
@@ -21,11 +21,11 @@ export default function _layout() {
             variant="h4"
             className="mb-6 font-bold text-white lg:leading-tight lg:tracking-[-2.16px]"
           >
-            Let’s empower your financial task today with Findash.
+            Let’s empower your cleaning task today with Clean House.
           </Heading>
 
           <Paragraph variant="subtitle2" className="text-secondary-200">
-            The one-stop platform for all financial management of small and
+            The one-stop platform for all cleaning management of small and
             medium-sized business.
           </Paragraph>
         </div>

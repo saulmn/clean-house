@@ -1,4 +1,4 @@
-app = "finlab"
+app = "clean-house"
 
 kill_signal = "SIGINT"
 kill_timeout = 5

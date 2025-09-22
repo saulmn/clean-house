@@ -39,25 +39,25 @@ export const links: LinksFunction = () => [
 export const meta: MetaFunction = () => {
   return [
     {
-      title: "Finlab - Remix Full Stack Client and Admin Finance Template",
+      title: "Clean House - Your Home Cleaning Partner",
     },
     {
       name: "description",
       content:
-        "The ultimate finance client, admin & dashboard template built with Remix, shadcn/ui and prisma.",
+        "Clean House is a professional home cleaning service that provides a wide range of cleaning services to help you keep your home looking its best.",
     },
     {
       name: "keywords",
       content:
-        "react,remix,kit,prisma,tailwind,application,dashboard,admin,template,theme",
+        "clean house, home cleaning, professional cleaning, cleaning services, home maintenance, home cleaning services, home cleaning company, home cleaning professionals, home cleaning services, home cleaning company, home cleaning professionals",
     },
     {
       name: "author",
-      content: "Diakitelo",
+      content: "Saúl MN",
     },
     {
       name: "copyright",
-      content: "Clean Houses",
+      content: "Clean House",
     },
     {
       name: "theme-color",
