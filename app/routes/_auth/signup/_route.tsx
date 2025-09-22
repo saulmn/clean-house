@@ -39,7 +39,7 @@ const schema = z.object({
 });
 
 export const meta: MetaFunction = () => [
-  { title: "Sign up | Remix Template" },
+  { title: "Sign up | Clean House" },
 ];
 
 export const loader = async ({ request }: LoaderFunctionArgs) => {

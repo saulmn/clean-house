@@ -17,7 +17,7 @@ import { requireUserId } from "@/session.server";
 import { prisma } from "@/db.server";
 
 export const meta: MetaFunction = () => [
-  { title: "Wallets | Remix Template" },
+  { title: "Wallets | Clean House" },
 ];
 
 export async function loader({ request }: LoaderFunctionArgs) {

@@ -17,7 +17,7 @@ import { updateUserBalance } from "@/models/user.server";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "Card details | Remix Template" },
+    { title: "Card details | Clean House" },
   ];
 };
 

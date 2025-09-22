@@ -24,7 +24,7 @@ import { getContacts } from "@/models/contact.server";
 import { prisma } from "@/db.server";
 
 export const meta: MetaFunction = () => [
-  { title: "Dashboard | Remix Template" },
+  { title: "Dashboard | Clean House" },
 ];
 
 export async function loader() {

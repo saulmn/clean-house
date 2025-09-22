@@ -7,7 +7,7 @@ import { SearchCard } from "./components";
 import { prisma } from "@/db.server";
 
 export const meta: MetaFunction = () => [
-  { title: "Help center | Remix Template" },
+  { title: "Help center | Clean House" },
 ];
 
 export async function loader({ request }: LoaderFunctionArgs) {

@@ -21,7 +21,7 @@ import {
 import { prisma } from "@/db.server";
 
 export const meta: MetaFunction = () => [
-  { title: "Statistics | Remix Template" },
+  { title: "Statistics | Clean House" },
 ];
 
 export async function loader() {

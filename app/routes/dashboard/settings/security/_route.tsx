@@ -24,7 +24,7 @@ import { InfoTooltip } from "@/components/admin";
 import { cn } from "@/utils/cn";
 
 export const meta: MetaFunction = () => [
-  { title: "Settings: Security | Remix templates" },
+  { title: "Settings: Security | Clean Houses" },
 ];
 
 const schema = z

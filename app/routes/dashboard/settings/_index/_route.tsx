@@ -30,7 +30,7 @@ import { requireUserId } from "@/session.server";
 import { prisma } from "@/db.server";
 
 export const meta: MetaFunction = () => [
-  { title: "Settings: Personal information | Remix Template" },
+  { title: "Settings: Personal information | Clean House" },
 ];
 
 const schema = z.object({

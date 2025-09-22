@@ -17,7 +17,7 @@ import { getUser, requireUserId } from "@/session.server";
 import { updateUserBalance } from "@/models/user.server";
 
 export const meta: MetaFunction = () => [
-  { title: "Transactions | Remix Template" },
+  { title: "Transactions | Clean House" },
 ];
 
 export async function loader({ request }: LoaderFunctionArgs) {

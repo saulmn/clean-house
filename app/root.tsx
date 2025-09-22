@@ -57,7 +57,7 @@ export const meta: MetaFunction = () => {
     },
     {
       name: "copyright",
-      content: "Remix Templates",
+      content: "Clean Houses",
     },
     {
       name: "theme-color",

@@ -10,7 +10,7 @@ import { formatToNow } from "@/utils/formatDate";
 import { prisma } from "@/db.server";
 
 export const meta: MetaFunction = () => [
-  { title: "Notifications | Remix Template" },
+  { title: "Notifications | Clean House" },
 ];
 
 export async function loader({ request }: LoaderFunctionArgs) {
