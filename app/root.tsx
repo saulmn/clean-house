@@ -16,7 +16,7 @@ import {
 } from "@remix-run/react";
 import NProgress from "nprogress";
 import { getUser } from "~/session.server";
-import stylesheet from "~/styles/tailwind.css";
+import stylesheet from "~/styles/tailwind.output.css";
 
 import slick from "slick-carousel/slick/slick.css";
 import slickTheme from "slick-carousel/slick/slick-theme.css";
