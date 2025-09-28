@@ -15,12 +15,11 @@ import {
   SheetTrigger,
 } from "@/components/ui";
 import UserNav from "./UserNav";
-import Notification from "./Notification";
 import Logo from "@/components/Logo";
 
 export default function Header() {
   return (
-    <header className="fixed z-50 w-full bg-[#1C2634] py-5 font-manrope">
+    <header className="fixed z-50 w-full bg-primary py-5 font-manrope">
       <Container className="flex items-center justify-between xl:px-0">
         <div className="flex items-center gap-[72px]">
           <div className="hidden lg:block">
@@ -48,11 +47,11 @@ export default function Header() {
             </NavigationMenuList>
           </NavigationMenu>
         </div>
-
+        <Button>Agregar producto</Button>
         <div className="flex gap-4">
           <div className="relative hidden lg:block">
             <Input
-              placeholder="Search anything here"
+              placeholder="Busca productos..."
               className="placeholder:text-[rgba(255, 255, 255, 0.50)] h-12 w-64 rounded-full border-none bg-[#FFFFFF]/10 py-2 pl-12 text-white"
             />
 
@@ -80,8 +79,6 @@ export default function Header() {
               />
             </svg>
           </div>
-
-          <Notification />
           <UserNav />
         </div>
       </Container>
@@ -91,20 +88,16 @@ export default function Header() {
 
 const NAV_ITEMS = [
   {
-    name: "Dashboard",
+    name: "Inicio",
     href: "/dashboard/overview",
   },
   {
-    name: "Wallets",
-    href: "/dashboard/wallets",
+    name: "Productos",
+    href: "/dashboard/products",
   },
   {
-    name: "Settings",
+    name: "Ajustes",
     href: "/dashboard/settings",
-  },
-  {
-    name: "Help Center",
-    href: "/dashboard/help-center",
   },
 ];
 

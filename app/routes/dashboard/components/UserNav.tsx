@@ -56,18 +56,7 @@ export default function UserNav() {
               to="/dashboard/settings"
               className="h-full w-full cursor-pointer py-1.5"
             >
-              Settings
-            </Link>
-          </DropdownMenuItem>
-        </DropdownMenuGroup>
-
-        <DropdownMenuGroup>
-          <DropdownMenuItem className="py-0" asChild>
-            <Link
-              to="/dashboard/help-center"
-              className="w-full cursor-pointer py-1.5"
-            >
-              Help Center
+              Ajustes
             </Link>
           </DropdownMenuItem>
         </DropdownMenuGroup>
@@ -78,7 +67,7 @@ export default function UserNav() {
             method="POST"
             className="w-full cursor-pointer py-1.5"
           >
-            <button>Log out</button>
+            <button>Salir</button>
           </Form>
         </DropdownMenuItem>
       </DropdownMenuContent>
