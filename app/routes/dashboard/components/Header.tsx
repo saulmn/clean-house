@@ -1,7 +1,8 @@
-import { useState } from "react";
-import { X } from "lucide-react";
-import { Form, NavLink } from "@remix-run/react";
 import * as SheetPrimitive from "@radix-ui/react-dialog";
+import { Form, NavLink } from "@remix-run/react";
+import { X } from "lucide-react";
+import { useState } from "react";
+import Logo from "@/components/Logo";
 // components
 import {
   Button,
@@ -15,7 +16,6 @@ import {
   SheetTrigger,
 } from "@/components/ui";
 import UserNav from "./UserNav";
-import Logo from "@/components/Logo";
 
 export default function Header() {
   return (
