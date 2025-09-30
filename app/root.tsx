@@ -1,8 +1,7 @@
-import { useEffect } from "react";
 import { cssBundleHref } from "@remix-run/css-bundle";
-import type { LoaderFunctionArgs, LinksFunction } from "@remix-run/node";
-import type { MetaFunction } from "@remix-run/react";
+import type { LinksFunction, LoaderFunctionArgs } from "@remix-run/node";
 import { json } from "@remix-run/node";
+import type { MetaFunction } from "@remix-run/react";
 import {
   Links,
   LiveReload,
@@ -15,14 +14,14 @@ import {
   useNavigation,
 } from "@remix-run/react";
 import NProgress from "nprogress";
-import { getUser } from "@/session.server";
-import stylesheet from "@/styles/tailwind.output.css";
-
-import slick from "slick-carousel/slick/slick.css";
-import slickTheme from "slick-carousel/slick/slick-theme.css";
+import nProgressStyles from "nprogress/nprogress.css";
+import { useEffect } from "react";
 import creditCardsStyle from "react-credit-cards-2/dist/es/styles-compiled.css";
 import phoneInputStye from "react-phone-number-input/style.css";
-import nProgressStyles from "nprogress/nprogress.css";
+import slick from "slick-carousel/slick/slick.css";
+import slickTheme from "slick-carousel/slick/slick-theme.css";
+import { getUser } from "@/session.server";
+import stylesheet from "@/styles/tailwind.css";
 
 import * as gtag from "@/utils/gtags.client";
 
