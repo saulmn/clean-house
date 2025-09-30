@@ -6,10 +6,6 @@ export default function _layout() {
   return (
     <div className="flex h-auto w-full flex-col font-manrope lg:h-screen lg:flex-row">
       <div className="flex basis-full flex-col bg-primary-500 lg:basis-1/2">
-        <div className="min-h-[50vh] overflow-hidden lg:h-full">
-          <img src="/images/auth.png" alt="dashboard" className="w-full" />
-        </div>
-
         <div className=" bg-secondary-500 p-6 lg:p-12">
           <div className="mb-6 h-10">
             <Link to="/">

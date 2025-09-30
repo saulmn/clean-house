@@ -21,7 +21,7 @@ import phoneInputStye from "react-phone-number-input/style.css";
 import slick from "slick-carousel/slick/slick.css";
 import slickTheme from "slick-carousel/slick/slick-theme.css";
 import { getUser } from "@/session.server";
-import stylesheet from "@/styles/tailwind.css";
+import stylesheet from "@/styles/tailwind.generated.css";
 
 import * as gtag from "@/utils/gtags.client";
 
