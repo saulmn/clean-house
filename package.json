@@ -8,7 +8,6 @@
 		"build:remix": "remix build",
 		"build:server": "esbuild --platform=node --format=cjs ./server.ts --outdir=build --bundle --external:fsevents",
 		"dev": "npm-run-all --parallel dev:*",
-		"dev:tailwind": "tailwindcss -i ./app/styles/tailwind.css -o ./app/styles/tailwind.generated.css --watch",
 		"dev:server": "cross-env NODE_ENV=development npm run build:server -- --watch",
 		"dev:remix": "remix dev --manual -c \"node --require ./mocks --watch-path ./build/server.js --watch ./build/server.js\"",
 		"docker": "docker compose up -d",
